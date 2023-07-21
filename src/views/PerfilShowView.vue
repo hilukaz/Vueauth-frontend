@@ -26,7 +26,7 @@
         },
         mounted () {
             axios
-            .get('http://localhost:3000/perfilpublic'
+            .get('{package.serverUrl}/perfilpublic'
             )
             .then(response => {
                 // this.perfil=response.data,//response.data[0] ele pega apenas o primeiro objeto

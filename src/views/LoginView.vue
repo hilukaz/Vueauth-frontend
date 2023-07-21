@@ -37,7 +37,7 @@ export default {
     ,
     submitForm() {
         console.log(this.email+this.password)
-      axios.post('http://localhost:3000/login',{//verifica login
+      axios.post('{package.serverUrl}/login',{//verifica login
         email: this.email,
         password: this.password,
       })
