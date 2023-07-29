@@ -35,7 +35,7 @@
         mounted () {
             const token = localStorage.getItem('token')
             axios
-            .get('${package.serverUrl}/perfil'
+            .get(package.serverUrl + '/perfil'
             )
             .then(response => (
                 // this.perfil=response.data,
