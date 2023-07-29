@@ -53,7 +53,7 @@ router.beforeEach((to, from, next) => {
       next('/login')
     } else {
       // console.log(token)
-      axios.get('http://localhost:3000/auth',{
+      axios.get('https://vueauth-backend.vercel.app'+'/auth',{
         
         headers: {//header só pode ser transmitido de página por página, não adianta mudar algo no navegador
           retornar:true,//a função auth vai pro middleware, porém um middleware não tem retorno

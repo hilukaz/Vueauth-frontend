@@ -3,7 +3,7 @@ import axios from 'axios'
 //esse código é feito para reutilização de código, ou seja para que eu não precise mais declarar o header no código
 
 const instance = axios.create({
-  baseURL: 'http://localhost:3000',
+  baseURL: 'https://vueauth-backend.vercel.app',
   headers: {
     'Content-Type': 'application/json',
   },

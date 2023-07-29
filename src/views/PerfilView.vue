@@ -35,7 +35,7 @@
         mounted () {
             const token = localStorage.getItem('token')
             axios
-            .get(package.serverUrl + '/perfil'
+            .get('https://vueauth-backend.vercel.app'+'/perfil'
             )
             .then(response => (
                 // this.perfil=response.data,

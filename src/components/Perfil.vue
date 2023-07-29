@@ -47,13 +47,13 @@
         },
         methods:{
           create(){
-              axios.put('http://localhost:3000/login',{//verifica login
+              axios.put('https://vueauth-backend.vercel.app/login',{//verifica login
               email: this.email,
               password: this.password,
             })
           },
           public(){
-            axios.put('http://localhost:3000/publicar/${this.id}', { public: true })
+            axios.put('https://vueauth-backend.vercel.app/publicar/${this.id}', { public: true })
             .then(response => {
               console.log(response.data);
             })

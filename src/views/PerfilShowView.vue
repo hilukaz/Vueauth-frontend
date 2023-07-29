@@ -26,7 +26,7 @@
         },
         mounted () {
             axios
-            .get(package.serverUrl + '/perfilpublic'
+            .get('https://vueauth-backend.vercel.app/perfilpublic'
             )
             .then(response => {
                 // this.perfil=response.data,//response.data[0] ele pega apenas o primeiro objeto

@@ -20,6 +20,7 @@
   
   <script>
   import axios from 'axios'
+  import serverUrl from '../components/config.js'
   export default {
 
     data() {
@@ -30,11 +31,12 @@
       }
     },
     methods: {
+      
       async submitForm() {//await é necessário o método async
         // aqui você pode enviar os dados do formulário para o servidor
         // ou fazer outras ações com os dados
         
-        axios.post(package.serverUrl + '/user',{
+        axios.post(serverUrl+'/user',{
         name: this.name,
         email: this.email,
         password: this.password,
@@ -42,8 +44,9 @@
         .then(response => console.log(response))//se for sucedido 
         .catch((error) => {
             console.log(error);
-            console.log(package.serverUrl);
         });
+        
+        console.log(process.env.serverUrl)
         this.$router.push('login');//direciona pra rota login
       }
     }
