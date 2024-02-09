@@ -46,7 +46,7 @@
             console.log(error);
         });
         
-        console.log(process.env.serverUrl)
+        // console.log(process.env.serverUrl)
         this.$router.push('login');//direciona pra rota login
       }
     }

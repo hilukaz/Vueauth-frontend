@@ -16,6 +16,7 @@
     // const token = localStorage.getItem('token');
     import axios from '../components/axiosConfig.ts'//arquivo de configuração do axios
     import PerfilUser from '../components/Perfil.vue'
+    import serverUrl from '../components/config.js'
     export default{
         name:'perfilone',
         components:{
@@ -35,11 +36,11 @@
         mounted () {
             const token = localStorage.getItem('token')
             axios
-            .get('https://vueauth-backend.vercel.app'+'/perfil'
+            .get(serverUrl+'/perfil'
             )
             .then(response => (
                 // this.perfil=response.data,
-                this.name=response.data.id,
+                this.id=response.data.id,
                 this.name=response.data.name,
                 this.email=response.data.email,
                 this.company=response.data.company

@@ -27,6 +27,7 @@
 <script>
     // const token = localStorage.getItem('token');
     import axios from './axiosConfig.ts'//arquivo de configuração do axios
+    import serverUrl from '../components/config.js'
     export default{
       name:'Perfil',
         data(){
@@ -47,13 +48,13 @@
         },
         methods:{
           create(){
-              axios.put('https://vueauth-backend.vercel.app/login',{//verifica login
+              axios.put(serverUrl+'/login',{//verifica login
               email: this.email,
               password: this.password,
             })
           },
           public(){
-            axios.put('https://vueauth-backend.vercel.app/publicar/${this.id}', { public: true })
+            axios.put(serverUrl+'/publicar/${this.id}', { public: true })
             .then(response => {
               console.log(response.data);
             })

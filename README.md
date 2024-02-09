@@ -1,5 +1,7 @@
 # front-end
 
+vue create front-end
+
 ## Project setup
 ```
 npm install

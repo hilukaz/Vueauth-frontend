@@ -11,6 +11,7 @@
     const token = localStorage.getItem('token');
     import axios from '../components/axiosConfig.ts'//arquivo de configuração do axios
     import PerfilUser from '../components/Perfil.vue'
+    import serverUrl from '../components/config.js'
     export default{
         name:'perfilall',
         components:{
@@ -26,7 +27,7 @@
         },
         mounted () {
             axios
-            .get('https://vueauth-backend.vercel.app/perfilpublic'
+            .get(serverUrl+'/perfilpublic'
             )
             .then(response => {
                 // this.perfil=response.data,//response.data[0] ele pega apenas o primeiro objeto

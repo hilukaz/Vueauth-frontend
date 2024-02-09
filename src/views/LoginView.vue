@@ -21,6 +21,7 @@
 
 <script>
 import axios from 'axios'
+import serverUrl from '../components/config.js'
 export default {
   data() {
     return {
@@ -37,7 +38,7 @@ export default {
     ,
     submitForm() {
         console.log(this.email+this.password)
-      axios.post('https://vueauth-backend.vercel.app'+'/login',{//verifica login
+      axios.post(serverUrl+'/login',{//verifica login
         email: this.email,
         password: this.password,
       })
