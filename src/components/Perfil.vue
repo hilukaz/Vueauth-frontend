@@ -9,7 +9,7 @@
       <!-- <button @click="create()"></button>  -->
           
       <button class="btn" @click="public" v-show="owner">Publicar</button>
-      <img src="https://via.placeholder.com/150" alt="Foto de perfil">
+      <img src="../assets/logo.png" alt="Foto de perfil">
         
         <h1>{{name}}</h1>
 
